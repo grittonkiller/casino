@@ -33,26 +33,26 @@ while reponse == "o":
 		gain = user_mise * 3
 		print ("VOUS AVEZ GAGNE : ", gain,"$, votre cagnotte est de :",cagnotte + user_mise + gain,"$" )
 		cagnotte = cagnotte + user_mise + gain
-		reponse = input("voulez_vous continuer ?")
+		reponse = reponse = input("voulez_vous continuer ?")
 	elif tirage % 2 == 0 and user_number % 2 == 0:
 		gain = user_mise + (user_mise / 2)
 		gain = math.ceil(gain) #essai ceil
 		cagnotte = cagnotte + user_mise + gain
 		print ("vous avez gagné la couleur pair",  gain,"$ votre cagnotte est de :", cagnotte,"$" )
 		reponse = input("voulez_vous continuer ?")
-		reponse.lower()
+		reponse = reponse.lower()
 	elif tirage % 2 == 1 and user_number % 2 == 1:
 		gain = user_mise + (user_mise / 2)
 		gain = math.ceil(gain) #essai ceil
 		print ("vous avez gagné la couleur impair", gain, "votre cagnotte est de", cagnotte,"$" )
 		cagnotte = cagnotte + user_mise + gain
 		reponse = input("voulez_vous continuer ?")
-		reponse.lower()
+		reponse = reponse.lower()
 	else:
 		cagnotte = cagnotte - user_mise
 		print ("vous avez perdu ! votre cagnotte est de : ", cagnotte,"$")
 		reponse = input("voulez_vous continuer ?")
-		reponse.lower()
+		reponse = reponse.lower()
 
 if cagnotte < 1:
 		print ("vous n'avez plus d'argent ! a bientôt")
